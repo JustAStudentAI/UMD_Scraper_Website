@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Results</title>
+    <style>
+        body {
+            background-color: #961012;
+            color: #ffffff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgb(37, 37, 38);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-family: 'Fantasy',serif;
+            color: #ffffff;
+            text-align: center;
+        }
+        .menu-content {
+            white-space: pre-wrap; /* Keeps the formatting of the `pre` tag but allows word wrap */
+            background-color: #2d2d30;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #e03a3e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #961012;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Menu Items</h1>
+    <div th:if="${menu}" class="menu-content">
+        <pre th:utext="${menu}">Menu content will be displayed here</pre>
+    </div>
+    <div th:if="${menu == null}">
+        <p>No menu data available.</p>
+    </div>
+    <div style="text-align: center;">
+        <a href="/scrape">Go back</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Dining Hall & Meal</title>
+    <style>
+        body {
+            font-family: 'Fantasy',serif;
+            /* Background image */
+            background-image: url('https://i.ibb.co/H24zs02/DALL-E-2024-02-08-08-50-07-Create-a-landscape-oriented-cartoonish-background-image-with-a-focus-on-t.webp');
+            background-size: contain;
+            background-repeat: repeat;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly more opacity for better readability */
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #e03a3e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #961012;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>Select Dining Hall & Meal</h1>
+    <form action="/scrape" method="post">
+        <label for="hall">Dining Hall:</label>
+        <select id="hall" name="hall">
+            <option value=16>South Campus</option>
+            <option value=19>Yhentamitsi</option>
+            <option value=51>251 North</option>
+        </select>
+        <label for="meal">Meal:</label>
+        <select id="meal" name="meal">
+            <option value=1>Breakfast</option>
+            <option value=2>Lunch</option>
+            <option value=3>Dinner</option>
+            <option value=0>All Meals</option>
+        </select>
+        <button type="submit">Display Menu</button>
+    </form>
+</div>
+</body>
+</html>
