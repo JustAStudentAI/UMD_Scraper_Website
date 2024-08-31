@@ -17,6 +17,12 @@ import java.io.IOException;
 @since Feb 8, 2024
  */
 
+// For website 
+@GetMapping("/")
+public String home() {
+    return "redirect:/scrape";
+}
+
 
 // Marks this class as a web request handler
 @Controller
