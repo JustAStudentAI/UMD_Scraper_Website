@@ -17,16 +17,17 @@ import java.io.IOException;
 @since Feb 8, 2024
  */
 
-// For website 
-@GetMapping("/")
-public String home() {
-    return "redirect:/scrape";
-}
-
 
 // Marks this class as a web request handler
 @Controller
 public class ScraperController {
+
+    
+    // For website home mapping
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/scrape";
+    }
 
     /* This method handles POST requests to the /scrape endpoint.
     Scrapes the menu off of the dynamic URL determined in the method.
